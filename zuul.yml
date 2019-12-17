@@ -1,0 +1,16 @@
+spring:
+  application:
+   name: zuul
+   
+   
+server:
+  port: 9999
+
+
+zuul:
+  routes:
+    movies:
+#     url: http://localhost:8080/
+      path: /movies
+      service-id: movies
+      strip-prefix: true
